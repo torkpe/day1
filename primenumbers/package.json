@@ -1,0 +1,25 @@
+{
+  "name": "primenumbers",
+  "version": "1.0.0",
+  "description": "to check the list of prime numbers from 0 to n",
+  "main": "getprimes.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torkpe/day1.git"
+  },
+  "keywords": [
+    "primenumbers"
+  ],
+  "author": "tope",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/torkpe/day1/issues"
+  },
+  "homepage": "https://github.com/torkpe/day1#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
