@@ -1,0 +1,17 @@
+{
+  "name": "oop",
+  "version": "1.0.0",
+  "description": "test for oop",
+  "main": "oop.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [
+    "oop"
+  ],
+  "author": "tope",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
