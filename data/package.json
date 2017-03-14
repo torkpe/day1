@@ -1,0 +1,22 @@
+{
+  "name": "datatype",
+  "version": "1.0.0",
+  "description": "to check the datatype of a variable",
+  "main": "datatype.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torkpe/datatype.git"
+  },
+  "keywords": [
+    "datatype"
+  ],
+  "author": "tope",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/torkpe/datatype/issues"
+  },
+  "homepage": "https://github.com/torkpe/datatype#readme"
+}
