@@ -1,25 +1,44 @@
-var student =require('../app/oop');
-(function (){
-	'use strict';
-	describe("Student Class: Create a student and define its attributes", function(){
+var Student = require('../app/oop.js');
 
-		it("The student should have a name in string form", function(){
-			var studentname = new student('');
-			expect(studentname).toEqual("student name cannot be empty");
-			var studentname= new Student(56789);
-			expect(studentname).toEqual("name has to be of string type");
-		});
+describe("Student Class: Create a student and define its attributes", function(){
 
-
+	it("The student should have a name and a department", function(){
+		var tope = new Student("Tope", "Computer Science", 3);
+		expect(tope.name).toEqual("Tope");
+		expect(tope.dept).toEqual("Computer Science");
+		expect(tope.cultist).toBe(false);
 	});
-	describe("Should have a valid level", function(){
-				it("should check if the level is valid", function(){
-					var studentlevel = new student("names", "courses", 0);
-					expect(studentlevel).toEqual("invalid");					
-					var studentlevel = new student("names", "courses", 1000);
-					expect(studentlevel).toEqual("invalid");
 
-				});
+  it("student should be a type of `object`, and an instance of the `Student` class", function(){
+    var johnson = new Student('Johnson');
+    expect(typeof johnson).toEqual(typeof {});
+    expect(johnson instanceof Student).toBeTruthy();
+  });
 
-	});
-})
+  it("every student has a 10 courses to write. ", function() {
+    var dexter = new Student('Dexter', 'Law');
+    expect(dexter.courses).toBe(10);
+  });
+
+  it("student gets no gradepoints until they get a grade", function() {
+    var victor = new Student('Victor', 'Engineering');
+    expect(victor.gradepoints).toBe(0);
+    victor.getGrade("A");
+    expect(victor.gradepoints).toBe(5);
+  });
+
+  it("student gets no carryover until they fail a course", function() {
+    var daniel = new Student('Daniel', 'Biology');
+    expect(daniel.carryovers).toBe(0);
+    daniel.failCourse();
+    expect(daniel.carryovers).toBe(1);
+  });
+
+  it("user should be a freshman if no level is passed as a parameter", function() {
+    var temi = new Student();
+    expect(temi.level).toEqual(1);
+  });
+
+
+
+});
